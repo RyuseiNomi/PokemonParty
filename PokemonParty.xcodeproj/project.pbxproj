@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		1B860A5A25E0BA4A00105DE6 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A5925E0BA4A00105DE6 /* Pokemon.swift */; };
 		1B860A6025E0BA5000105DE6 /* PokemonInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A5F25E0BA5000105DE6 /* PokemonInteractor.swift */; };
 		1B860A6625E0BA5400105DE6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A6525E0BA5400105DE6 /* AppState.swift */; };
+		1B860A6C25E0BB7400105DE6 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 1B860A6B25E0BB7400105DE6 /* QGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B860A6C25E0BB7400105DE6 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +192,9 @@
 			dependencies = (
 			);
 			name = PokemonParty;
+			packageProductDependencies = (
+				1B860A6B25E0BB7400105DE6 /* QGrid */,
+			);
 			productName = PokemonParty;
 			productReference = 1B860A1F25E0AB3C00105DE6 /* PokemonParty.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +266,9 @@
 				Base,
 			);
 			mainGroup = 1B860A1625E0AB3C00105DE6;
+			packageReferences = (
+				1B860A6A25E0BB7400105DE6 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 1B860A2025E0AB3C00105DE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -628,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B860A6A25E0BB7400105DE6 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B860A6B25E0BB7400105DE6 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B860A6A25E0BB7400105DE6 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B860A1725E0AB3C00105DE6 /* Project object */;
 }
