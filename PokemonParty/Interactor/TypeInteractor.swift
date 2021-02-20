@@ -83,10 +83,13 @@ class TypeInteractor: ObservableObject {
         //}
         // 苦手タイプの追加
         for weakType in type.weakType {
-            guard let weakTypeObject = self.appState.pokemonObject.typeCompatibility.first(where: { $0.typeName == weakType }) else {
+            // 既に追加されているタイプかどうかチェック
+            if self.appState.pokemonObject.weakTypes.filter{ $0.typeName == weakType } != [] {
                 return
             }
-            self.appState.pokemonObject.weakTypes.append(weakTypeObject)
+            // タイプの取得
+            let weakTypeObject = self.appState.pokemonObject.typeCompatibility.filter{ $0.typeName == weakType }
+            self.appState.pokemonObject.weakTypes.append(contentsOf: weakTypeObject)
         }
     }
     
