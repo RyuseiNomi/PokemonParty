@@ -18,6 +18,7 @@
 		1B860A6025E0BA5000105DE6 /* PokemonInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A5F25E0BA5000105DE6 /* PokemonInteractor.swift */; };
 		1B860A6625E0BA5400105DE6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A6525E0BA5400105DE6 /* AppState.swift */; };
 		1B860A6C25E0BB7400105DE6 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 1B860A6B25E0BB7400105DE6 /* QGrid */; };
+		1B860A7225E0CF1600105DE6 /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 1B860A7125E0CF1600105DE6 /* PokemonAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B860A6C25E0BB7400105DE6 /* QGrid in Frameworks */,
+				1B860A7225E0CF1600105DE6 /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +196,7 @@
 			name = PokemonParty;
 			packageProductDependencies = (
 				1B860A6B25E0BB7400105DE6 /* QGrid */,
+				1B860A7125E0CF1600105DE6 /* PokemonAPI */,
 			);
 			productName = PokemonParty;
 			productReference = 1B860A1F25E0AB3C00105DE6 /* PokemonParty.app */;
@@ -268,6 +271,7 @@
 			mainGroup = 1B860A1625E0AB3C00105DE6;
 			packageReferences = (
 				1B860A6A25E0BB7400105DE6 /* XCRemoteSwiftPackageReference "QGrid" */,
+				1B860A7025E0CF1600105DE6 /* XCRemoteSwiftPackageReference "PokemonAPI" */,
 			);
 			productRefGroup = 1B860A2025E0AB3C00105DE6 /* Products */;
 			projectDirPath = "";
@@ -646,6 +650,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		1B860A7025E0CF1600105DE6 /* XCRemoteSwiftPackageReference "PokemonAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinkofer/PokemonAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -653,6 +665,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B860A6A25E0BB7400105DE6 /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
+		};
+		1B860A7125E0CF1600105DE6 /* PokemonAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B860A7025E0CF1600105DE6 /* XCRemoteSwiftPackageReference "PokemonAPI" */;
+			productName = PokemonAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
