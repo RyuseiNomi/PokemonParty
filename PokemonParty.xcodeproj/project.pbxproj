@@ -19,6 +19,8 @@
 		1B860A6625E0BA5400105DE6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A6525E0BA5400105DE6 /* AppState.swift */; };
 		1B860A6C25E0BB7400105DE6 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 1B860A6B25E0BB7400105DE6 /* QGrid */; };
 		1B860A7225E0CF1600105DE6 /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 1B860A7125E0CF1600105DE6 /* PokemonAPI */; };
+		1B860A7725E0D40B00105DE6 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A7625E0D40B00105DE6 /* Type.swift */; };
+		1B860A7C25E0D8BB00105DE6 /* TypeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B860A7B25E0D8BB00105DE6 /* TypeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1B860A5925E0BA4A00105DE6 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		1B860A5F25E0BA5000105DE6 /* PokemonInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonInteractor.swift; sourceTree = "<group>"; };
 		1B860A6525E0BA5400105DE6 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		1B860A7625E0D40B00105DE6 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		1B860A7B25E0D8BB00105DE6 /* TypeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				1B860A5925E0BA4A00105DE6 /* Pokemon.swift */,
+				1B860A7625E0D40B00105DE6 /* Type.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1B860A5F25E0BA5000105DE6 /* PokemonInteractor.swift */,
+				1B860A7B25E0D8BB00105DE6 /* TypeInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 				1B860A6025E0BA5000105DE6 /* PokemonInteractor.swift in Sources */,
 				1B860A5A25E0BA4A00105DE6 /* Pokemon.swift in Sources */,
 				1B860A6625E0BA5400105DE6 /* AppState.swift in Sources */,
+				1B860A7C25E0D8BB00105DE6 /* TypeInteractor.swift in Sources */,
+				1B860A7725E0D40B00105DE6 /* Type.swift in Sources */,
 				1B860A5425E0BA2100105DE6 /* TopView.swift in Sources */,
 				1B860A2325E0AB3C00105DE6 /* PokemonPartyApp.swift in Sources */,
 			);
