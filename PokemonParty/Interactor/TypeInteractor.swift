@@ -56,31 +56,17 @@ class TypeInteractor: ObservableObject {
         PokemonAPI().pokemonService.fetchPokemon(name) { result in
             switch result {
             case .success(let pokemon):
-                dump("a")
                 types = pokemon.types!
                 for type in types {
                     let typeName = type.type!.name!
-                    self.findWeakType(typeName)
+                    DispatchQueue.main.async {
+                        self.findWeakType(typeName)
+                    }
                 }
             case .failure(let error):
                 print(error)
             }
         }
-        //let publisher = Future<String, Error> { promise in
-        //    promise(.success("OK"))
-        //}
-        //let cancellable = PokemonAPI().pokemonService.fetchPokemon(name)
-        //    .sink(receiveCompletion: { completion in
-        //        if case .failure(let error) = completion {
-        //            print(error.localizedDescription)
-        //        }
-        //    }, receiveValue: { pokemon in
-        //        types = pokemon.types!
-        //        for type in types {
-        //            let typeName = type.type!.name!
-        //            self.findWeakType(typeName)
-        //        }
-        //    })
     }
     
     private func findWeakType(_ typeName: String) {
