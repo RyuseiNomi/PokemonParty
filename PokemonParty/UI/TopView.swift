@@ -9,8 +9,21 @@ struct TopView: View {
     
     var body: some View {
         VStack() {
+            if self.appState.pokemonObject.weakTypes.isEmpty {
+                Text("弱点はありません")
+            }
+            QGrid(self.appState.pokemonObject.weakTypes,
+                  columns: 3,
+                  vSpacing: 15,
+                  hSpacing: 5,
+                  vPadding: 10,
+                  hPadding: 10,
+                  isScrollable: true
+            ) { type in
+                TypeCell(type: type)
+            }
             if self.appState.pokemonObject.pokemons.isEmpty {
-                Text("ポケモンを入力")
+                Text("ポケモンを入力する")
             }
             QGrid(self.appState.pokemonObject.pokemons,
                   columns: 2,
@@ -21,19 +34,6 @@ struct TopView: View {
                   isScrollable: true
             ) { pokemon in
                 PokemonCell(pokemon: pokemon)
-            }
-            if self.appState.pokemonObject.weakTypes.isEmpty {
-                Text("弱点はありません")
-            }
-            QGrid(self.appState.pokemonObject.weakTypes,
-                  columns: 2,
-                  vSpacing: 15,
-                  hSpacing: 5,
-                  vPadding: 10,
-                  hPadding: 10,
-                  isScrollable: true
-            ) { type in
-                TypeCell(type: type)
             }
             HStack() {
                 TextField("ポケモンを入力", text: $inputedName, onCommit: {
@@ -47,7 +47,6 @@ struct TopView: View {
                     .padding(EdgeInsets(top: 0, leading: 5, bottom: 30, trailing: 5))
                 Button(action:{
                     //self.validateInputedName(inputedName: self.inputedMemberName)
-                    dump("added")
                     let pi = PokemonInteractor(appState: self.appState)
                     pi.addPokemon(self.inputedName)
                     let ti = TypeInteractor(appState: self.appState)
@@ -75,7 +74,7 @@ struct PokemonCell: View {
     var body: some View {
         ZStack() {
             HStack() {
-                Image(systemName: "person.fill")
+                Image(systemName: "hare.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.gray)
@@ -111,6 +110,12 @@ struct TypeCell: View {
     var body: some View {
         ZStack() {
             HStack() {
+                Image(systemName: "flame.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: 30, maxHeight: 30)
+                    .padding(EdgeInsets(top: 8, leading: 10, bottom: 8, trailing:10))
                 Text(type.typeName)
                     .foregroundColor(Color(red: 105/255, green: 105/255, blue: 105/255))
                     .font(Font.custom("Helvetica-Light", size: 16))
